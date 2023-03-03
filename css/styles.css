@@ -54,7 +54,8 @@ body {
     margin-bottom: 10px;
 }
 
-.start-game-btn {
+.start-game-btn, 
+.reset-btn {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -69,7 +70,8 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.start-game-btn:hover {
+.start-game-btn:hover,
+.reset-btn:hover {
     background-color: #3e8e41;
 }
 
@@ -83,6 +85,7 @@ body {
 .game-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
     margin: 0 auto;
     gap: 20px;
@@ -92,11 +95,10 @@ body {
 
 .game-status {
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     border-radius: 8px;
-    background-color: rgb(254, 207, 214);
+    background-color: rgb(240, 158, 247);
     padding: 10px;
 }
 

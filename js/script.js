@@ -1,7 +1,9 @@
-// <---------------------- Imports ---------------------->
+/* ---------------------- Imports ----------------------> */
+
 import { winConditions } from './conditions.js'
 
 /*----- app's state (variables) -----*/
+
 const board = [
     ["","","","","","",""],
     ["","","","","","",""],
@@ -17,7 +19,7 @@ let winner = false
 let count = 0
 let messageEl
 
-// <---------------------- Build UI ---------------------->
+/* ---------------------- Build UI ---------------------- */
 
 document.querySelector('.start-game-btn').addEventListener('click', () => {
     document.querySelector('.info-box').style.display = 'none'
@@ -35,11 +37,12 @@ function buildGameContainer() {
     const gameContainerEl = document.createElement('div')
     gameContainerEl.classList.add('game-container')
     document.body.appendChild(gameContainerEl)
+    buildStatusScreen()
     const gameBoardEl = document.createElement('div')
     gameBoardEl.classList.add('game-board')
     gameContainerEl.appendChild(gameBoardEl)
     for (let idx = 0; idx <= 6; idx++) buildGameColumns(idx)
-    buildStatusScreen()
+    createResetBtn(gameContainerEl)
 }
 
 function buildTitle(elem) {
@@ -76,7 +79,7 @@ function buildStatusScreen() {
 
 function buildMessage(elem) {
     messageEl = document.createElement('div')
-    messageEl.textContent = 'Player Blue Starts'
+    messageEl.textContent = 'Current Player'
     messageEl.classList.add('message')
     elem.appendChild(messageEl)
 }
@@ -89,6 +92,14 @@ function createStatusChip(elem) {
     chipEl.style.height = '50px'
     chipEl.style.backgroundColor = 'blue'
     elem.appendChild(chipEl)
+}
+
+function createResetBtn(elem) {
+    const resetBtn = document.createElement('button')
+    resetBtn.classList.add('reset-btn')
+    resetBtn.textContent = 'Reset Game'
+    resetBtn.addEventListener('click', handleReset)
+    elem.appendChild(resetBtn)
 }
 
 /*----- functions -----*/
@@ -155,4 +166,24 @@ function colFull(col) {
         if (!board[i][col]) return false; 
     }
     return true;
+}
+
+function handleReset() {
+    const board = [
+        ["","","","","","",""],
+        ["","","","","","",""],
+        ["","","","","","",""],
+        ["","","","","","",""],
+        ["","","","","","",""],
+        ["","","","","","",""],
+    ]
+    
+    player = "Blue"
+    row = null
+    col = null
+    winner = false
+    count = 0
+    Array.from(document.getElementsByClassName('cell')).forEach(cell => cell.style.backgroundColor = '#333')
+    messageEl.textContent = 'Current Player'
+    document.querySelector('.chip').style.backgroundColor = 'blue'
 }
