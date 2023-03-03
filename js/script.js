@@ -4,7 +4,7 @@ import { winConditions } from './conditions.js'
 
 /*----- app's state (variables) -----*/
 
-const board = [
+let board = [
     ["","","","","","",""],
     ["","","","","","",""],
     ["","","","","","",""],
@@ -169,7 +169,7 @@ function colFull(col) {
 }
 
 function handleReset() {
-    const board = [
+    board = [
         ["","","","","","",""],
         ["","","","","","",""],
         ["","","","","","",""],
