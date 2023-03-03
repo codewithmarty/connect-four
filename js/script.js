@@ -47,7 +47,7 @@ function buildGameContainer() {
 
 function buildTitle(elem) {
     const titleEl = document.createElement('img')
-    titleEl.src = '../img/connect-four.png'
+    titleEl.src = '/img/connect-four.png'
     titleEl.classList.add('title')
     document.body.appendChild(titleEl)
 }
