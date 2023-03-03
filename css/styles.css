@@ -11,7 +11,7 @@ body {
 }
 
 .title {
-    width: 30%;
+    width: 30rem;
     margin: 0 auto;
 }
 
@@ -55,7 +55,8 @@ body {
 }
 
 .start-game-btn, 
-.reset-btn {
+.reset-btn,
+#close-overlay {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -71,7 +72,8 @@ body {
 }
 
 .start-game-btn:hover,
-.reset-btn:hover {
+.reset-btn:hover,
+#close-overlay:hover {
     background-color: #3e8e41;
 }
 
@@ -148,3 +150,33 @@ body {
     cursor: pointer;
 }
 
+/* Style the overlay container */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+  
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #616161;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    text-align: center;
+}
+  
+.overlay-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #fff;
+}

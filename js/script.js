@@ -19,12 +19,18 @@ let winner = false
 let count = 0
 let messageEl
 
-/* ---------------------- Build UI ---------------------- */
+/* ---------------------- Event Listeners ---------------------- */
 
 document.querySelector('.start-game-btn').addEventListener('click', () => {
     document.querySelector('.info-box').style.display = 'none'
     init()
 })
+
+document.querySelector('#close-overlay').addEventListener('click', () => {
+    document.querySelector('.overlay').style.display = "none"
+})
+
+/* ---------------------- Build UI ---------------------- */
 
 function init() {
     buildGameContainer()
@@ -113,7 +119,8 @@ function handleClick(evt) {
             checkWin()
             player = player == "Blue" ? "Yellow" : "Blue";
             if (winner) {
-                messageEl.innerText = `${winner} wins!`
+                document.querySelector('.overlay').style.display = "block"
+                document.querySelector('.overlay-img').src = `img/${winner}.png`
             } else {
                 messageEl.innerText = `${player}'s turn!`
                 document.querySelector('.chip').style.backgroundColor = player.toLowerCase()
