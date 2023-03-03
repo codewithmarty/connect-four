@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+.info-box {
+  font-family: 'Baloo 2', cursive;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+}
+
+.info-box h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.info-box h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+  
+.info-box p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+  
+.info-box ul, .info-box ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+  
+.info-box li {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.start-game-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-family: 'Baloo 2', cursive;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-game-btn:hover {
+    background-color: #3e8e41;
+}
+
+.start-game-container {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
