@@ -34,7 +34,7 @@ Some basic tips for playing Connect Four:
 
 ## Play the Game
 
-The game can be accessed [here](https://lehitutoring.github.io/connect-four/). It requires two players. Remember, blue always goes first. When the game concludes, an overlay appears on screen indicating the game is over. To reset, click close on the overlay and press reset.
+The game can be accessed [here](https://codewithmarty.github.io/connect-four/). It requires two players. Remember, blue always goes first. When the game concludes, an overlay appears on screen indicating the game is over. To reset, click close on the overlay and press reset.
 
 ## Future Work
 
